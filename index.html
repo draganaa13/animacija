@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacija</title>
+    <style type="text/CSS">
+    
+        body {
+            background-color: #050210;
+        }
+        #circle1::before {
+            position:absolute;
+            bottom: 300px;
+            width: 200px;
+            height: 200px;
+            content: "";
+
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            border-radius: 100%;
+            background: linear-gradient(to left,  #fb5dad, #55fb9f, #b97aff);
+            filter: blur(3px);
+            box-shadow: 0px 0px 40px #fb5dad, #55fb9f, #b97aff;
+            animation-name: colorcircle;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+           
+            @keyframes colorcircle {
+                from {
+                    rotate:0deg;
+                }
+                to {
+                    rotate:360deg;
+                }}
+                 }
+               
+                 #circle2 { 
+            position:absolute;
+            bottom: 325px;
+            width: 150px;
+            height: 150px;
+
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            border-radius: 100%;
+            background:radial-gradient(#050210,#2f2f31);
+            animation-name: darkcircle;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            @keyframes darkcircle {
+                from {
+                     background: #050210 0%;
+                }
+                to {
+                       background:#050210 100%;
+                }}
+                
+            }
+             
+             
+           
+        
+    </style>
+        
+    
+</head>
+<body>
+    
+    <div id="circle1"></div>
+    <div id="circle2"></div>
+
+    
+    
+       
+    
+
+
+    
+</body>
+</html>
